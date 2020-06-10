@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1591342834248_1" label="nacos-all" name="nacos-all">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/nacos-distribution" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/nacos-address" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/nacos-naming" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/nacos-console" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/nacos-1.2.1" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/nacos-cmdb" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/nacos-api" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/nacos-test" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/nacos-istio" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/nacos-config" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/nacos-client" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/nacos-example" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/nacos-common" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/nacos-core" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1591342800306_0" label="Window Working Set" name="Aggregate for window 1591342800305"/>
+</workingSetManager>

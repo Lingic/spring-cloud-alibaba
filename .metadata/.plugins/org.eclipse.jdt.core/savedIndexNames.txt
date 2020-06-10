@@ -1,0 +1,1 @@
+INDEX VERSION 1.127+C:\Likui\github\spring-cloud-alibaba\.metadata\.plugins\org.eclipse.jdt.core
