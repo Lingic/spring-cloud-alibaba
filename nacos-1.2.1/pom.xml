@@ -431,17 +431,27 @@
     <!-- 子模块管理 -->
     <modules>
         <module>istio</module>
+        <!-- Nacos配置中心的实现 -->
         <module>config</module>
+        <!-- 属性加载、初始化、监听器相关 -->
         <module>core</module>
+        <!-- Nacos核心功能，动态服务发现 -->
         <module>naming</module>
+        <!-- 地址服务相关 -->
         <module>address</module>
         <module>test</module>
+        <!-- 主要是把naming、config的api进行了抽取，从结构上看更清晰些，api的具体实现还在client里面 -->
         <module>api</module>
+        <!-- nacos客户端代码，naming、config两个功能的客户端 -->
         <module>client</module>
         <module>example</module>
+        <!-- 共用工具类 -->
         <module>common</module>
+        <!-- 发布相关 -->
         <module>distribution</module>
         <module>console</module>
+        <!-- 配置管理数据（Configuration Management Databae, CMDB） -->
+        <!-- 支持对接第三方cmdb数据库，使用selector机制来配置服务的路由类型、支持单机模式使用MySQL数据库 -->
         <module>cmdb</module>
     </modules>
 
