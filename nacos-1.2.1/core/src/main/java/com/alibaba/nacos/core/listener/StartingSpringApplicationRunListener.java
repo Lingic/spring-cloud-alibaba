@@ -68,6 +68,10 @@ public class StartingSpringApplicationRunListener implements SpringApplicationRu
         starting = true;
     }
 
+    /**
+     * 2020-06-11 by Likui annotation
+     * 如果单例模式=true，那么采用单机运行，否则是集群模式
+     */
     @Override
     public void environmentPrepared(ConfigurableEnvironment environment) {
         if (STANDALONE_MODE) {

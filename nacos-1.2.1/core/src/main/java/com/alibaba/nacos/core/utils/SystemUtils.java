@@ -103,6 +103,11 @@ public class SystemUtils {
             .getTotalPhysicalMemorySize());
     }
 
+    /**
+     * 2020-06-11 by Likui annotation
+     * 获取nacos配置目录，默认C:\Users\用户名\nacos
+     * @return
+     */
     private static String getNacosHome() {
         String nacosHome = System.getProperty(NACOS_HOME_KEY);
         if (StringUtils.isBlank(nacosHome)) {
