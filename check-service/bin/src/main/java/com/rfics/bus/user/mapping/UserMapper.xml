@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rfics.bus.user.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.rfics.bus.user.entity.Users">
+        <result column="username" jdbcType="VARCHAR" property="userName" />
+        <result column="password" jdbcType="VARCHAR" property="passWord" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+        <result column="remark" jdbcType="VARCHAR" property="remark" />
+    </resultMap>
+        <resultMap id="token" type="com.rfics.bus.user.entity.Token">
+        <result column="username" jdbcType="VARCHAR" property="userName" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="tokenGenTime" />
+        <result column="expire_time" jdbcType="TIMESTAMP" property="tokenExpireTime" />
+        <result column="token" jdbcType="VARCHAR" property="token" />
+    </resultMap>
+    <select id="getUser"  parameterType="com.rfics.bus.user.entity.Users" resultMap="BaseResultMap">
+      	SELECT * FROM users 
+            WHERE username = #{userName, jdbcType=VARCHAR}
+            AND password = #{passWord, jdbcType=VARCHAR}
+    </select>
+    <insert id="insertToken"  parameterType="com.rfics.bus.user.entity.Token">
+      	INSERT INTO token (
+      						id,
+      						username,
+      						token,
+      						create_time,
+      						expire_time
+      						)
+      				VALUES(
+      				#{id, jdbcType=VARCHAR},
+      				#{userName, jdbcType=VARCHAR},
+      				#{token, jdbcType=VARCHAR},
+      				#{tokenGenTime, jdbcType=VARCHAR},
+      				#{tokenExpireTime, jdbcType=VARCHAR}
+      				)
+    </insert>
+    <update id="updateToken"  parameterType="com.rfics.bus.user.entity.Token">
+      	UPDATE token SET 
+      					expire_time = #{tokenExpireTime, jdbcType=TIMESTAMP}
+        			WHERE 
+        				token = #{token, jdbcType=VARCHAR}
+    </update>
+    <delete id="deleteToken"  parameterType="com.rfics.bus.user.entity.Token">
+      	DELETE  FROM token WHERE token = #{token, jdbcType=VARCHAR}
+    </delete>
+    
+    <select id="getToken"  parameterType="java.util.Map" resultMap="token">
+      	SELECT * FROM token WHERE 1=1
+      	 <if test="userName != null and userName != ''">
+      	 	AND username = #{userName, jdbcType=VARCHAR}
+      	 </if>
+      	 <if test="token != null and token != ''">
+      	  	AND token = #{token, jdbcType=VARCHAR}
+      	 </if>
+    </select>
+    <update id="updateUser"  parameterType="com.rfics.bus.user.entity.Users">
+	    <if test="userName != null and userName != ''">
+		    <if test="passWord != null and passWord != ''">
+		      	UPDATE users SET 
+		      					password = #{passWord, jdbcType=VARCHAR}
+		        			WHERE 
+		        				username = #{userName, jdbcType=VARCHAR}
+		     </if>
+	     </if>
+    </update>
+    
+</mapper>

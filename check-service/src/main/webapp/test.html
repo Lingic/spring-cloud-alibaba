@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    welcome to test.html page.
+    
+    <form action="/check-service/file/fileUpload" method="post" enctype="multipart/form-data">
+    	<input type="hidden" name="zone" value="北京"/>
+    	<input type="hidden" name="type" value="1"/>
+    	<input type="file" multiple name="file" class="input-file"/>
+		<button type="submit" class="btn btn-primary" style="width: 100px;">提交</button>
+	</form>
+	
+	<br/>
+	<br/>
+	<br/>
+	
+	<form action="/check-service/file/fileDownload" method="post" enctype="application/json">
+    	<input type="hidden" name="zone" value="北京"/>
+    	<input type="hidden" name="type" value="1"/>
+    	<input type="hidden" name="fileName" value="北京_1_20200721095500550_附件1：地方自评报告.xlsx"/>
+		<button type="submit" class="btn btn-primary" style="width: 100px;">下载</button>
+	</form>
+	
+	<br/>
+	<br/>
+	<br/>
+	
+	<form action="/check-service/file/deleteFile" method="post" enctype="application/json">
+    	<input type="hidden" name="zone" value="北京"/>
+<!--     	<input type="hidden" name="type" value="1"/> -->
+    	<input type="hidden" name="fileName" value="北京_1_202007211016541654_附件1：地方自评报告.xlsx"/>
+		<button type="submit" class="btn btn-primary" style="width: 100px;">删除</button>
+	</form>
+	
+</body>
+</html>

@@ -1,0 +1,23 @@
+[
+	{
+	    "username": "admin1",
+	    "password": "admin1",
+	    "token": "token-center-1",
+	    "zone": "北京市",
+	    "privilege": 1
+	},
+	{
+	    "username": "user1",
+	    "password": "user1",
+		"token": "token-local-1",
+	    "zone": "北京市",
+	    "privilege": 2
+	},
+	{
+	    "username": "user2",
+	    "password": "user2",
+	    "token": "token-local-2",
+	    "zone": "北京市",
+	    "privilege": 2
+	}
+]
